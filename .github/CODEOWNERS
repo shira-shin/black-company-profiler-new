@@ -1,0 +1,9 @@
+# コードオーナーを指定
+# ルート以下すべては @shira-shin さんがオーナー
+*       @shira-shin
+
+# ドキュメント周りはドキュメントチーム
+/docs/  @shira-shin
+
+# サービスコードはバックエンドチーム
+/server/ @shira-shin
