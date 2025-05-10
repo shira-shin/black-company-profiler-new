@@ -1,0 +1,12 @@
+version: 1
+
+labels:
+  bug:
+    # タイトルが [BUG] で始まる Issue
+    - '^\[BUG\]'
+  enhancement:
+    # タイトルが [FEATURE] で始まる Issue
+    - '^\[FEATURE\]'
+  documentation:
+    # docs フォルダへの変更を伴う PR にも使えます（必要なら拡張）
+    - 'docs/.*'

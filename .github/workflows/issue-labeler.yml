@@ -1,0 +1,18 @@
+name: Label new issues
+
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write    # Issue にラベルを書く権限を付与
+
+    steps:
+      - name: Auto-label issues
+        uses: github/issue-labeler@v1
+        with:
+          configuration-path: .github/labeler-v1.yml
+          token:            ${{ secrets.GITHUB_TOKEN }}
