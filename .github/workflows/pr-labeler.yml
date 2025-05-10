@@ -1,0 +1,26 @@
+# .github/workflows/pr-labeler.yml
+
+name: Label Pull Requests
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write  # PR にラベルを付与する権限
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Label pull request
+        uses: actions/labeler@v5
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: .github/labeler.yml

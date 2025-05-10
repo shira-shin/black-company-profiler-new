@@ -1,0 +1,20 @@
+# .github/labeler.yml
+
+# コードベースのディレクトリごとにラベルを付与
+documentation:
+  - 'docs/**'
+
+backend:
+  - 'server/**'
+
+tests:
+  - 'tests/**'
+
+ci:
+  - '.github/workflows/**'
+
+chore:
+  - 'README.md'
+  - 'LICENSE'
+  - '.gitignore'
+  - 'pytest.ini'
